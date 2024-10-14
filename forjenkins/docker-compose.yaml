@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    ports:
+      - "8082:8080" # Port สำหรับ Jenkins UI
+      - "50000:50000" # Port สำหรับ Jenkins agents
+    volumes:
+      - jenkins_home:/var/jenkins_home # Persistent storage for Jenkins data
+      - /var/run/docker.sock:/var/run/docker.sock # Mount Docker socket for Docker commands
+    environment:
+      JENKINS_OPTS: --httpPort=8080
+    user: root # Run as root to install Docker
+
+    # คำสั่งติดตั้ง Docker
+    command: >
+      /bin/bash -c "apt-get update &&
+                    apt-get install -y docker.io &&
+                    apt-get clean &&
+                    chown -R jenkins:jenkins /var/jenkins_home &&
+                    exec /usr/local/bin/jenkins.sh"
+
+volumes:
+  jenkins_home:
