@@ -1,20 +1,30 @@
 pipeline {
     agent any
     stages {
-        stage('Clone Repository') {
+        stage('Initialize') {
             steps {
-                git branch: 'main', url: 'https://github.com/PSBLaLaHey/next-test-jenkins'
+                sh 'echo "Initializing..."'
             }
         }
-        stage('Build') {
+        stage('Checkout') {
             steps {
-                sh 'echo "Building..."'
-                
+                sh 'echo "Checking out..."'
+                script {
+                    cleanWs()
+                    git branch: "main", url: 'https://github.com/PSBLaLaHey/next-test-jenkins'
+                }
+            }
+        }
+        stage('Pull') {
+            steps {
+                sh 'echo "Pulling latest changes..."'
+                sh 'git pull origin main'  // เพิ่มคำสั่ง git pull
             }
         }
         stage('Deploy') {
             steps {
                 sh 'echo "Deploying..."'
+                sh 'docker-compose up -d --build'
             }
         }
     }
