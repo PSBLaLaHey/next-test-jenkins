@@ -15,7 +15,7 @@ export default function Home() {
         />
         <ol>
           <li>
-            Get started by editing <code>app/page.js</code>.
+            Get started by Gay <code>app/page.js</code>.
           </li>
           <li>Bom is Gay.</li>
         </ol>
