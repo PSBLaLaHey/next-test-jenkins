@@ -31,7 +31,7 @@ export default function Home() {
               className={styles.logo}
               src="https://nextjs.org/icons/vercel.svg"
               alt="Vercel logomark"
-              width={20}
+              width={200}
               height={20}
             />
             Deploy now
