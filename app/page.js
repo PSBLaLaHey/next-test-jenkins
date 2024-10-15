@@ -32,7 +32,7 @@ export default function Home() {
               src="https://nextjs.org/icons/vercel.svg"
               alt="Vercel logomark"
               width={200}
-              height={20}
+              height={200}
             />
             Deploy now
           </a>
