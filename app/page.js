@@ -13,6 +13,8 @@ export default function Home() {
           height={38}
           priority
         />
+        <Image
+        src="..\image\Screenshot_20230227_010038.png"/>
         <ol>
           <li>
             Get started by Bom <code>app/page.js</code>.
