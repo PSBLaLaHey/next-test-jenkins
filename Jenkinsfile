@@ -1,11 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Initialize') {
-            steps {
-                sh 'echo "Initializing..."'
-            }
-        }
         stage('Checkout') {
             steps {
                 sh 'echo "Checking out..."'
