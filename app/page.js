@@ -15,9 +15,9 @@ export default function Home() {
         />
         <ol>
           <li>
-            Get started by Gay <code>app/page.js</code>.
+            Get started by Bom <code>app/page.js</code>.
           </li>
-          <li>Bom is Gay.</li>
+          <li>Sponser by bso-space.</li>
         </ol>
 
         <div className={styles.ctas}>
