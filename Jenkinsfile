@@ -15,12 +15,6 @@ pipeline {
                 }
             }
         }
-        stage('Pull') {
-            steps {
-                sh 'echo "Pulling latest changes..."'
-                sh 'git pull origin main'  // เพิ่มคำสั่ง git pull
-            }
-        }
         stage('Deploy') {
             steps {
                 sh 'echo "Deploying..."'
