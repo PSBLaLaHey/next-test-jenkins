@@ -15,7 +15,7 @@ export default function Home() {
         />
         <ol>
           <li>
-            Get started by Bom <code>app/page.js</code>.
+            Get One <code>app/page.js</code>.
           </li>
           <li>Sponser by bso-space.</li>
         </ol>
